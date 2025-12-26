@@ -4,7 +4,11 @@ import { education } from '@/content/education'
 export default function EducationPage() {
   return (
     <Section title="Education">
-      <p className="whitespace-pre-line">{education}</p>
+      <div className="mt-6 max-w-prose">
+        <p className="whitespace-pre-line text-sm leading-relaxed">
+          {education}
+        </p>
+      </div>
     </Section>
   )
 }

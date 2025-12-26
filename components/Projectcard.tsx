@@ -8,9 +8,11 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <div className="space-y-1">
-      <h3 className="font-medium">{title}</h3>
-      <p className="text-sm text-gray-600 dark:text-gray-400">
+    <div className="space-y-2 max-w-prose">
+      <h3 className="font-medium">
+        {title}
+      </h3>
+      <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
         {description}
       </p>
     </div>

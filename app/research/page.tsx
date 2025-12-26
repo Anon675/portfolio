@@ -1,40 +1,35 @@
-import Section from '@/components/Section'
-import Link from 'next/link'
+import Image from 'next/image'
 
-export default function ResearchPage() {
+export default function HomePage() {
   return (
-    <Section title="Research">
+    <section className="space-y-10">
 
-      <div className="space-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start md:items-center">
 
-        <div>
-          <h2 className="text-lg font-medium">
-            Bone Fracture Detection from X-ray Images
-          </h2>
-          <p className="mt-2 max-w-3xl">
-            A comparative deep learning study on CNN architectures for
-            fracture detection, with emphasis on reliability and evaluation.
+        <div className="md:col-span-2 space-y-4">
+          <h1 className="text-3xl font-semibold">
+            Aman Shukla
+          </h1>
+          <p className="text-sm leading-relaxed text-gray-300">
+            Machine Learning practitioner with experience in applied ML systems,
+            research-oriented experimentation, and real-world pipeline design.
+            My work focuses on evaluation rigor, system reliability, and knowing
+            where automation breaks down.
           </p>
-          <Link href="/research/bone-fracture" className="underline mt-2 inline-block">
-            Read research →
-          </Link>
         </div>
 
-        <div>
-          <h2 className="text-lg font-medium">
-            Limits of Automatic MCQ Reconstruction
-          </h2>
-          <p className="mt-2 max-w-3xl">
-            A case study analyzing why OCR-centric pipelines fail under
-            classroom board video ambiguity.
-          </p>
-          <Link href="/research/mcq-extraction" className="underline mt-2 inline-block">
-            Read case study →
-          </Link>
+        <div className="flex justify-center md:justify-end">
+          <Image
+            src="/images/profile/aman.jpg"
+            alt="Aman Shukla"
+            width={240}
+            height={240}
+            className="rounded-full"
+          />
         </div>
 
       </div>
 
-    </Section>
+    </section>
   )
 }
