@@ -1,35 +1,44 @@
-import Image from 'next/image'
+import Section from '@/components/Section'
+import Link from 'next/link'
 
-export default function HomePage() {
+export default function ResearchPage() {
   return (
-    <section className="space-y-10">
+    <Section title="Research">
+      <div className="mt-6 space-y-10 max-w-prose">
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start md:items-center">
-
-        <div className="md:col-span-2 space-y-4">
-          <h1 className="text-3xl font-semibold">
-            Aman Shukla
-          </h1>
-          <p className="text-sm leading-relaxed text-gray-300">
-            Machine Learning practitioner with experience in applied ML systems,
-            research-oriented experimentation, and real-world pipeline design.
-            My work focuses on evaluation rigor, system reliability, and knowing
-            where automation breaks down.
+        <div className="space-y-2">
+          <h2 className="text-lg font-medium">
+            Bone Fracture Detection from X-ray Images
+          </h2>
+          <p className="text-sm leading-relaxed">
+            A comparative deep learning study on CNN architectures for
+            fracture detection, with emphasis on reliability and evaluation.
           </p>
+          <Link
+            href="/research/bone-fracture"
+            className="underline inline-block text-sm"
+          >
+            Read research →
+          </Link>
         </div>
 
-        <div className="flex justify-center md:justify-end">
-          <Image
-            src="/images/profile/aman.jpg"
-            alt="Aman Shukla"
-            width={240}
-            height={240}
-            className="rounded-full"
-          />
+        <div className="space-y-2">
+          <h2 className="text-lg font-medium">
+            Limits of Automatic MCQ Reconstruction
+          </h2>
+          <p className="text-sm leading-relaxed">
+            A case study analyzing why OCR-centric pipelines fail under
+            classroom board video ambiguity.
+          </p>
+          <Link
+            href="/research/mcq-extraction"
+            className="underline inline-block text-sm"
+          >
+            Read case study →
+          </Link>
         </div>
 
       </div>
-
-    </section>
+    </Section>
   )
 }

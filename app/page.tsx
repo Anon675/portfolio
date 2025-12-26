@@ -15,7 +15,7 @@ export default function HomePage() {
         </div>
 
         <Image
-          src="/images/profile/aman.jpg"
+          src="/images/profile/a.jpg"
           alt="Aman Shukla"
           width={240}
           height={240}
