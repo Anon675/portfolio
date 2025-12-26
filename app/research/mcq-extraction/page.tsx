@@ -80,8 +80,8 @@ export default function MCQExtractionResearchPage() {
       </table>
 
       <Image
-        src="/images/research/confusion-matrix-comparison.png"
-        alt="Confusion matrix comparison showing failure modes"
+        src="/images/research/recall_vs_length.png"
+        alt="Recall Vs Length"
         width={1200}
         height={700}
         className="rounded border mb-10"
