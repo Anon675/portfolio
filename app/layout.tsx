@@ -16,10 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen bg-white text-gray-900 dark:bg-black dark:text-gray-100 antialiased">
         <Navbar />
 
-        <main className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
           {children}
         </main>
       </body>

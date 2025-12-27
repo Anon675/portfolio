@@ -3,7 +3,7 @@ import Section from '@/components/Section'
 export default function MCQExtractionProjectPage() {
   return (
     <Section title="Multimodal MCQ Extraction Pipeline from Classroom Videos">
-      <div className="mt-6 space-y-10">
+      <div className="space-y-8 max-w-4xl">
 
         <p className="max-w-prose text-sm leading-relaxed">
           This project involved building an end-to-end machine learning pipeline

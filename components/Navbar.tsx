@@ -1,124 +1,74 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [projects, setProjects] = useState(false)
+  const [research, setResearch] = useState(false)
 
   return (
-    <header className="border-b border-white/10">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="border-b border-gray-200 dark:border-gray-800">
+      <div className="mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="font-semibold text-lg">
+          Aman Shukla
+        </Link>
 
-          {/* Brand */}
-          <Link href="/" className="text-sm font-medium">
-            Aman Shukla
-          </Link>
+        <nav className="hidden md:flex gap-6 text-sm">
+          <Link href="/projects">Projects</Link>
+          <Link href="/research">Research</Link>
+          <Link href="/experience">Experience</Link>
+          <Link href="/education">Education</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8 text-sm">
+        <button className="md:hidden text-xl" onClick={() => setOpen(true)}>
+          ☰
+        </button>
+      </div>
 
-            {/* Projects */}
-            <div className="relative group">
-              <Link href="/projects" className="cursor-pointer">
-                Projects
-              </Link>
+      {open && (
+        <div className="fixed inset-0 z-50 bg-black text-white">
+          <div className="px-6 py-6 space-y-6 text-base">
+            <button onClick={() => setOpen(false)}>Close ✕</button>
 
-              <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition">
-                <div className="w-64 rounded-md border border-white/10 bg-black shadow-lg">
-                  <Link href="/projects/mcq-extraction" className="block px-4 py-2 hover:bg-white/5">
-                    Multimodal MCQ Extraction
+            <div>
+              <button onClick={() => setProjects(!projects)}>Projects</button>
+              {projects && (
+                <div className="ml-4 mt-3 space-y-2 text-sm">
+                  <Link href="/projects/mcq-extraction" onClick={() => setOpen(false)}>
+                    MCQ Extraction
                   </Link>
-                  <Link href="/projects/ml-system" className="block px-4 py-2 hover:bg-white/5">
-                    Failure Aware ML System
-                  </Link>
-                  <Link href="/projects/mern-chat" className="block px-4 py-2 hover:bg-white/5">
-                    Real-Time MERN Chat
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Research */}
-            <div className="relative group">
-              <Link href="/research" className="cursor-pointer">
-                Research
-              </Link>
-
-              <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition">
-                <div className="w-64 rounded-md border border-white/10 bg-black shadow-lg">
-                  <Link href="/research/bone-fracture" className="block px-4 py-2 hover:bg-white/5">
-                    Bone Fracture Detection
-                  </Link>
-                  <Link href="/research/mcq-extraction" className="block px-4 py-2 hover:bg-white/5">
-                    MCQ Extraction Case Study
+                  <Link href="/projects/mern-chat" onClick={() => setOpen(false)}>
+                    MERN Chat
                   </Link>
                 </div>
-              </div>
+              )}
             </div>
 
-            <Link href="/experience">Experience</Link>
-            <Link href="/education">Education</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setMobileOpen(true)}
-            className="md:hidden"
-            aria-label="Open menu"
-          >
-            ☰
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Drawer */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-black/60 md:hidden">
-          <div className="absolute right-0 top-0 h-full w-72 bg-black border-l border-white/10 p-6 space-y-8">
-
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="text-sm"
-            >
-              Close ✕
-            </button>
-
-            <div className="space-y-6 text-sm">
-
-              <div>
-                <p className="mb-2 font-medium">Projects</p>
-                <Link href="/projects/mcq-extraction" onClick={() => setMobileOpen(false)} className="block mb-1">
-                  MCQ Extraction
-                </Link>
-                <Link href="/projects/ml-system" onClick={() => setMobileOpen(false)} className="block mb-1">
-                  ML System
-                </Link>
-                <Link href="/projects/mern-chat" onClick={() => setMobileOpen(false)} className="block">
-                  MERN Chat
-                </Link>
-              </div>
-
-              <div>
-                <p className="mb-2 font-medium">Research</p>
-                <Link href="/research/bone-fracture" onClick={() => setMobileOpen(false)} className="block mb-1">
-                  Bone Fracture
-                </Link>
-                <Link href="/research/case-study" onClick={() => setMobileOpen(false)} className="block">
-                   An Empirical Study
-                </Link>
-              </div>
-
-              <Link href="/experience" onClick={() => setMobileOpen(false)}>Experience</Link>
-              <Link href="/education" onClick={() => setMobileOpen(false)}>Education</Link>
-              <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+            <div>
+              <button onClick={() => setResearch(!research)}>Research</button>
+              {research && (
+                <div className="ml-4 mt-3 space-y-2 text-sm">
+                  <Link href="/research/bone-fracture" onClick={() => setOpen(false)}>
+                    Bone Fracture
+                  </Link>
+                  <Link href="/research/case-study" onClick={() => setOpen(false)}>
+                    An Empirical Study
+                  </Link>
+                </div>
+              )}
             </div>
 
+            <Link href="/experience" onClick={() => setOpen(false)}>Experience</Link>
+            <Link href="/education" onClick={() => setOpen(false)}>Education</Link>
+            <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
           </div>
         </div>
       )}
     </header>
   )
 }
+
+
