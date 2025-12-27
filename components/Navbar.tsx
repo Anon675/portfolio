@@ -106,7 +106,7 @@ export default function Navbar() {
                 <Link href="/research/bone-fracture" onClick={() => setMobileOpen(false)} className="block mb-1">
                   Bone Fracture
                 </Link>
-                <Link href="/research/mcq-extraction" onClick={() => setMobileOpen(false)} className="block">
+                <Link href="/research/case-study" onClick={() => setMobileOpen(false)} className="block">
                    An Empirical Study
                 </Link>
               </div>

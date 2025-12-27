@@ -31,7 +31,7 @@ export default function ResearchPage() {
             classroom board video ambiguity.
           </p>
           <Link
-            href="/research/mcq-extraction"
+            href="/research/case-study"
             className="underline inline-block text-sm"
           >
             Read case study →
