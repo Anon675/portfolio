@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function BoneFractureResearchPage() {
   return (
-    <section className="space-y-12 max-w-prose">
+    <section className="space-y-12  max-w-4xl">
 
       <h1 className="text-3xl font-semibold">
         Bone Fracture Detection from X-ray Images
