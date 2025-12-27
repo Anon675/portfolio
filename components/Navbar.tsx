@@ -68,6 +68,14 @@ export default function Navbar() {
                   >
                     MCQ Extraction
                   </Link>
+                  
+                   <Link
+                    href="/projects/ml-system"
+                    onClick={() => setOpen(false)}
+                    className="block"
+                  >
+                    Multimodal ML System
+                  </Link>
 
                   <Link
                     href="/projects/mern-chat"
