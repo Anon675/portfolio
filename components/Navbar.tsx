@@ -5,8 +5,6 @@ import Link from 'next/link'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [projectsOpen, setProjectsOpen] = useState(false)
-  const [researchOpen, setResearchOpen] = useState(false)
 
   return (
     <>
@@ -23,58 +21,48 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6 text-sm">
 
-              {/* Projects Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setProjectsOpen(!projectsOpen)}
-                  className="hover:underline"
-                >
+              {/* Projects (hover dropdown) */}
+              <div className="relative group">
+                <span className="cursor-pointer">
                   Projects
-                </button>
+                </span>
 
-                {projectsOpen && (
-                  <div className="absolute left-0 mt-2 w-56 border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-                    <Link
-                      href="/projects/mcq-extraction"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
-                    >
-                      Multimodal MCQ Extraction
-                    </Link>
-                    <Link
-                      href="/projects/mern-chat"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
-                    >
-                      Real-Time MERN Chat Application
-                    </Link>
-                  </div>
-                )}
+                <div className="absolute left-0 mt-2 hidden w-56 border border-gray-200 dark:border-gray-800 bg-white dark:bg-black group-hover:block">
+                  <Link
+                    href="/projects/mcq-extraction"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
+                  >
+                    Multimodal MCQ Extraction
+                  </Link>
+                  <Link
+                    href="/projects/mern-chat"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
+                  >
+                    Real-Time MERN Chat Application
+                  </Link>
+                </div>
               </div>
 
-              {/* Research Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setResearchOpen(!researchOpen)}
-                  className="hover:underline"
-                >
+              {/* Research (hover dropdown) */}
+              <div className="relative group">
+                <span className="cursor-pointer">
                   Research
-                </button>
+                </span>
 
-                {researchOpen && (
-                  <div className="absolute left-0 mt-2 w-56 border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-                    <Link
-                      href="/research/bone-fracture"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
-                    >
-                      Bone Fracture Detection
-                    </Link>
-                    <Link
-                      href="/research/mcq-extraction"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
-                    >
-                      MCQ Reconstruction Case Study
-                    </Link>
-                  </div>
-                )}
+                <div className="absolute left-0 mt-2 hidden w-56 border border-gray-200 dark:border-gray-800 bg-white dark:bg-black group-hover:block">
+                  <Link
+                    href="/research/bone-fracture"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
+                  >
+                    Bone Fracture Detection
+                  </Link>
+                  <Link
+                    href="/research/mcq-extraction"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-900"
+                  >
+                    MCQ Reconstruction Case Study
+                  </Link>
+                </div>
               </div>
 
               <Link href="/experience" className="hover:underline">
@@ -107,7 +95,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (RIGHT SIDE) */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           <div
@@ -115,7 +103,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
           />
 
-          <div className="absolute left-0 top-0 h-full w-64 bg-white dark:bg-black p-6 space-y-6">
+          <div className="absolute right-0 top-0 h-full w-64 bg-white dark:bg-black p-6 space-y-6">
 
             <Link href="/" onClick={() => setMobileOpen(false)}>
               Home
