@@ -24,7 +24,7 @@ export default function ResearchPage() {
 
         <div className="space-y-2">
           <h2 className="text-lg font-medium">
-            Limits of Automatic MCQ Reconstruction
+            Why Full Automation Failed: An Empirical Study
           </h2>
           <p className="text-sm leading-relaxed">
             A case study analyzing why OCR-centric pipelines fail under

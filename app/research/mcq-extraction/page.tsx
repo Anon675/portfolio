@@ -3,13 +3,14 @@ import Image from 'next/image'
 
 export default function MCQExtractionResearchPage() {
   return (
-    <Section title="Limits of Automatic MCQ Reconstruction from Classroom Board Videos">
+    <Section title="Why Full Automation Failed: An Empirical Study">
 
       <h2 className="text-lg font-medium mb-3">
         Abstract
       </h2>
       <p className="mb-10 max-w-4xl">
-        This case study investigates the feasibility of extracting multiple-choice
+        This section documents an empirical investigation into the feasibility
+        investigates the feasibility of extracting multiple-choice
         questions (MCQs) from classroom teaching videos using OCR-centric methods.
         Despite extensive system engineering, the approach exhibits a hard
         accuracy ceiling due to inherent visual and semantic ambiguity. The study
@@ -23,8 +24,8 @@ export default function MCQExtractionResearchPage() {
         Classroom board videos differ fundamentally from static documents.
         Content is written incrementally, erased, overwritten, and intermixed
         with explanations. Multiple languages and symbols coexist, and spoken
-        context is not visually encoded. The objective was to design a fully
-        automatic MCQ extraction system without human intervention.
+        context is not visually encoded.The initial objective was to design a
+        fully automatic system; subsequent results motivated a deeper analysis of feasibility.
       </p>
 
       <h2 className="text-lg font-medium mb-3">
@@ -102,7 +103,7 @@ export default function MCQExtractionResearchPage() {
       </h2>
       <p className="mb-10 max-w-4xl">
         The study shows that automatic MCQ extraction from classroom board videos
-        is information-limited rather than compute-limited. Accuracy plateaus
+        is appears to be information-limited rather than compute-limited in practice. Accuracy plateaus
         despite increased model complexity, indicating a fundamental constraint
         in the input modality.
       </p>

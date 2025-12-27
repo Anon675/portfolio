@@ -24,6 +24,18 @@ export default function ProjectsPage() {
 
         <div className="space-y-2">
           <Link
+            href="/projects/ml-system"
+            className="text-lg font-medium inline-block"
+          >
+            Failure Aware Multimodal ML System
+          </Link>
+          <p className="text-sm leading-relaxed text-gray-300">
+            Multimodal ML system that evaluates uncertainty.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <Link
             href="/projects/mern-chat"
             className="text-lg font-medium inline-block"
           >
