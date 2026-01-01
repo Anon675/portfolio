@@ -10,29 +10,41 @@ export default function ProjectsPage() {
 
       <div className="space-y-8">
 
-        <div className="space-y-2">
-          <Link
-            href="/projects/mcq-extraction"
-            className="text-lg font-medium inline-block"
-          >
-            Multimodal MCQ Extraction Pipeline
-          </Link>
-          <p className="text-sm leading-relaxed text-gray-300">
-            OCR-centric ML pipeline for extracting MCQs from classroom videos.
-          </p>
-        </div>
+       <div className="space-y-2">
+  <h2 className="text-lg font-medium">
+    Failure Aware Multimodal ML System
+  </h2>
 
-        <div className="space-y-2">
-          <Link
-            href="/projects/ml-system"
-            className="text-lg font-medium inline-block"
-          >
-            Failure Aware Multimodal ML System
-          </Link>
-          <p className="text-sm leading-relaxed text-gray-300">
-            Multimodal ML system that evaluates uncertainty.
-          </p>
-        </div>
+  <p className="text-sm leading-relaxed text-gray-300">
+    Multimodal ML system that evaluates uncertainty.
+  </p>
+
+  <Link
+    href="/projects/ml-system"
+    className="underline inline-block text-sm"
+  >
+    View project →
+  </Link>
+</div>
+
+
+       <div className="space-y-2">
+  <h2 className="text-lg font-medium">
+    Multimodal MCQ Extraction Pipeline
+  </h2>
+
+  <p className="text-sm leading-relaxed text-gray-300">
+    OCR-centric ML pipeline for extracting MCQs from classroom videos.
+  </p>
+
+  <Link
+    href="/projects/mcq-extraction"
+    className="underline inline-block text-sm"
+  >
+    View project →
+  </Link>
+</div>
+
         
         <div className="space-y-2">
          <h2 className="text-lg font-medium">
@@ -49,7 +61,7 @@ export default function ProjectsPage() {
             >
                View project →
                 </Link>
-         </div>
+        </div>
 
 
       </div>
