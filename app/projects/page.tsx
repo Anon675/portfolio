@@ -33,18 +33,24 @@ export default function ProjectsPage() {
             Multimodal ML system that evaluates uncertainty.
           </p>
         </div>
-
+        
         <div className="space-y-2">
-          <Link
-            href="/projects/mern-chat"
-            className="text-lg font-medium inline-block"
-          >
-            Real-Time MERN Chat Application
-          </Link>
-          <p className="text-sm leading-relaxed text-gray-300">
-            Scalable chat system with authentication and real-time messaging.
-          </p>
-        </div>
+         <h2 className="text-lg font-medium">
+                Real-Time MERN Chat Application
+         </h2>
+
+         <p className="text-sm leading-relaxed text-gray-300">
+           Scalable chat system with authentication and real-time messaging.
+           </p>
+
+           <Link
+              href="/projects/mern-chat"
+              className="underline inline-block text-sm"
+            >
+               View project →
+                </Link>
+         </div>
+
 
       </div>
 
