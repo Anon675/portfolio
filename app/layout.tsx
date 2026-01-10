@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
+import LLMProvider from './providers/LLMProvider'
 
 export const metadata: Metadata = {
   title: 'Aman Shukla',
@@ -22,6 +23,8 @@ export default function RootLayout({
         <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
           {children}
         </main>
+
+        <LLMProvider />
       </body>
     </html>
   )
