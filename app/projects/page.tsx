@@ -45,6 +45,42 @@ export default function ProjectsPage() {
   </Link>
 </div>
 
+</div>
+
+
+       <div className="space-y-2">
+  <h2 className="text-lg font-medium">
+    Math Mentor
+  </h2>
+
+  <p className="text-sm leading-relaxed text-gray-300">
+    AI Math Mentor that solves JEE-style math problems from text, images, or audio using RAG, multi-agent reasoning, and step-by-step explanations.
+  </p>
+
+  <Link
+    href="/projects/mentor"
+    className="underline inline-block text-sm"
+  >
+    View project →
+  </Link>
+
+ </div>
+
+
+       <div className="space-y-2">
+  <h2 className="text-lg font-medium">
+    Inventory Intelligence
+  </h2>
+
+  <p className="text-sm leading-relaxed text-gray-300">
+Built an end-to-end inventory intelligence pipeline that forecasts demand, optimizes reorder decisions, and evaluates stock-out and supplier risk using real retail transactional data.  </p>
+
+  <Link
+    href="/projects/inventory"
+    className="underline inline-block text-sm"
+  >
+    View project →
+  </Link> 
         
         <div className="space-y-2">
          <h2 className="text-lg font-medium">
